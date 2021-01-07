@@ -17,13 +17,13 @@ const TabA = () => {
   return (
     <View style={{ marginHorizontal: 10, marginVertical: 5 }}>
       <Text>Bezier Line Chart</Text>
-      <Text>y = e^x</Text>
-      <Text>x ∈ [-6; 6]</Text>
+      <Text>y = x^3</Text>
+      <Text>x ∈ [-3; 3]</Text>
       <LineChart
         data={{
           datasets: [
             {
-              data: [-6, 1, 6],
+              data: [-3, 1, 3],
             },
           ],
         }}

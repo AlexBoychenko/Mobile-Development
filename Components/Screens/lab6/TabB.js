@@ -31,7 +31,7 @@ const TabB = () => {
   return (
     <View style={{ marginHorizontal: 10, marginVertical: 5 }}>
       <Text>Section chart</Text>
-      <Text>35% (green), 40% (yellow), 25% (red)</Text>
+      <Text>30% (orange), 30% (green), 40% (black)</Text>
 
       <PieChart
         data={data}
