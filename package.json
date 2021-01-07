@@ -18,5 +18,10 @@
   "devDependencies": {
     "@babel/core": "~7.9.0"
   },
+  "product": {
+    "productName": "MobileDevelopment",
+    "organizationName": "Alex Boychenko",
+    "organizationIdentifier": "ua.kpi.comsys.ip7304"
+  },
   "private": true
 }
