@@ -2,7 +2,11 @@ import React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 
-import { MainStackNavigator, ImageStackNavigator } from "./StackNavigation";
+import {
+  MainStackNavigator,
+  ImageStackNavigator,
+  DrawingStackNavigator,
+} from "./StackNavigation";
 
 const Tab = createBottomTabNavigator();
 
@@ -30,6 +34,16 @@ const BottomTabNavigation = () => {
           tabBarLabel: "Image list",
           tabBarIcon: ({ color, size }) => (
             <MaterialCommunityIcons name="image" color={color} size={size} />
+          ),
+        }}
+      />
+      <Tab.Screen
+        name="Drawing"
+        component={DrawingStackNavigator}
+        options={{
+          tabBarLabel: "Drawing",
+          tabBarIcon: ({ color, size }) => (
+            <MaterialCommunityIcons name="draw" color={color} size={size} />
           ),
         }}
       />

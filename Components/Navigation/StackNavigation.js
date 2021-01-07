@@ -7,6 +7,7 @@ import Description from "../Screens/lab4/Description";
 import AddMovie from "../Screens/lab4/AddMovie";
 import ImageList from "../Screens/lab5/ImageList";
 import AddImage from "../Screens/lab5/AddImage";
+import Drawing from "../Screens/lab6/Drawing";
 
 const Stack = createStackNavigator();
 
@@ -53,4 +54,18 @@ const ImageStackNavigator = () => {
   );
 };
 
-export { MainStackNavigator, ImageStackNavigator };
+const DrawingStackNavigator = () => {
+  return (
+    <Stack.Navigator>
+      <Stack.Screen
+        name="Drawing"
+        component={Drawing}
+        options={{
+          headerTitle: "Drawing",
+        }}
+      />
+    </Stack.Navigator>
+  );
+};
+
+export { MainStackNavigator, ImageStackNavigator, DrawingStackNavigator };
