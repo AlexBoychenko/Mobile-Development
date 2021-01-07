@@ -14,8 +14,18 @@ const MainStackNavigator = ({ navigation }) => {
         component={Movies}
         options={{
           headerTitle: "Movie list",
+          headerRight: () => (
+            <TouchableOpacity
+              style={{ marginRight: 15 }}
+              onPress={() => navigation.navigate("Add Movie")}
+            >
+              <MaterialCommunityIcons name="plus" size={35} />
+            </TouchableOpacity>
+          ),
         }}
       />
+      <Stack.Screen name="Description" component={Description} />
+      <Stack.Screen name="Add Movie" component={AddMovie} />
     </Stack.Navigator>
   );
 };
