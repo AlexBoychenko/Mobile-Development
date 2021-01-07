@@ -18,5 +18,10 @@
   "devDependencies": {
     "@babel/core": "~7.9.0"
   },
+  "product": {
+    "productName": "MobileDevelopment",
+    "organizationName": "Valeriia Vinnichenko",
+    "organizationIdentifier": "ua.kpi.comsys.ip7306"
+  },
   "private": true
 }
