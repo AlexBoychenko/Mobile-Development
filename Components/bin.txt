@@ -1,0 +1,54 @@
+Movies 
+
+import React from "react";
+import {
+  Button,
+  SafeAreaView,
+  ScrollView,
+  TouchableOpacity,
+  View,
+} from "react-native";
+import { MoviesList } from "../MoviesList";
+import { createStackNavigator } from "@react-navigation/stack";
+
+// import list from "./MovieList.json";
+
+import MovieDescription from "./MovieDescription";
+
+import Movie from "./Movie";
+
+const Stack = createStackNavigator();
+
+const Movies = ({ navigation }) => {
+  const dataItems = MoviesList.Search.map((item) => (
+    <View>
+      <Movie
+        key={item.imdbID}
+        img={item.Poster}
+        header={item.Title}
+        year={item.Year}
+        type={item.Type}
+      />
+      <Button
+        title="Press"
+        onPress={() => navigation.navigate("MovieDescription")}
+      />
+    </View>
+  ));
+
+  return (
+    <SafeAreaView style={{ flex: 1 }}>
+      <ScrollView>{dataItems}</ScrollView>
+      <Stack.Navigator initialRouteName="MovieDescription">
+        <Stack.Screen name="MovieDescription" component={MovieDescription} />
+      </Stack.Navigator>
+    </SafeAreaView>
+  );
+};
+
+export default Movies;
+
+
+
+-----------------
+
